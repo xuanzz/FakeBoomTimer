@@ -16,6 +16,13 @@ void updateTimer(float timeRatio)
   {
     remainingTime--;
     segmentShow(remainingTime, ledState, 1);
+    if (remainingTime > 0)
+      myDFPlayer.playMp3Folder(1);
+    else
+    {
+      myDFPlayer.playMp3Folder(2);
+      currentTimeRatio = 0;
+    }
     tickTockCount = 100;
     if (ledState == LOW) {
       ledState = HIGH;
