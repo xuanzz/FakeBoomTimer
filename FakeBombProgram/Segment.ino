@@ -4,15 +4,11 @@ void segmentSetup()
   segmentShow(0);
 }
 
-void segmentShow(int number)
-{
-  if (number <= 99)
-    display.showNumberDec(number, 0);
 }
 
 void segmentShow(int number, int dotPost, int showZero)
 {
-  if (number <= 99)
+  if (number <= 9999 && number >= 0)
   {
     display.showNumberDecEx(number, (0x80 >> dotPost+1),showZero);
   }
