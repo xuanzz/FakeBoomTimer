@@ -1,10 +1,9 @@
 void segmentSetup()
 {
   display.setBrightness(0x0f);
-  segmentShow(0);
+  segmentShow(0,0,1);
 }
 
-}
 
 void segmentShow(int number, int dotPost, int showZero)
 {
