@@ -1,8 +1,5 @@
 void playerSettings()
-{
-  softSerial.begin(9600);
-  Serial.begin(115200);
-   
+{   
   if (!myDFPlayer.begin(softSerial)) {  //Use softwareSerial to communicate with mp3.
     Serial.println(F("Unable to begin:"));
     Serial.println(F("1.Please recheck the connection!"));
@@ -10,5 +7,5 @@ void playerSettings()
   }
   Serial.println(F("DFPlayer Mini online."));
   
-  myDFPlayer.volume(10);  //Set volume value. From 0 to 30
+  myDFPlayer.volume(20);  //Set volume value. From 0 to 30
 }

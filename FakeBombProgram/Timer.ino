@@ -6,6 +6,7 @@ void timerSetup()
 
 void tickTock(void)
 {
+  checkWire();
   updateTimer(currentTimeRatio);
 }
 
